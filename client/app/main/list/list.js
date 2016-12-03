@@ -4,8 +4,7 @@ angular.module('uiApp')
     .config(function ($stateProvider) {
         $stateProvider
             .state('list', {
-                parent: 'main',
-                url: 'list',
+                url: '',
                 templateUrl: 'app/main/list/list.html',
                 controller: 'ListCtrl as vmList'
             });

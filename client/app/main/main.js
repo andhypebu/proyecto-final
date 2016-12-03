@@ -4,7 +4,7 @@ angular.module('uiApp')
   .config(function($stateProvider) {
     $stateProvider
       .state('main', {
-        url: '/',
+        url: '',
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
         controllerAs: 'main'

@@ -24,10 +24,14 @@
       <link rel="stylesheet" href="app/app.css">
       <!-- injector:css -->
       <link rel="stylesheet" href="app/app.css">
+      <link rel="stylesheet" href="app/main/categorias/categorias.css">
+      <link rel="stylesheet" href="app/main/categorias/celulares/celulares.css">
+      <link rel="stylesheet" href="app/main/categorias/computadoras/computadoras.css">
       <link rel="stylesheet" href="app/main/list/angular/angular.css">
       <link rel="stylesheet" href="app/main/list/angular/edit-dialog/edit-dialog.css">
       <link rel="stylesheet" href="app/main/list/java/java.css">
       <link rel="stylesheet" href="app/main/list/list.css">
+      <link rel="stylesheet" href="app/main/login/login.css">
       <link rel="stylesheet" href="app/main/main.css">
       <link rel="stylesheet" href="app/myInput/myInput.css">
       <link rel="stylesheet" href="app/test/directives/directives.css">
@@ -43,9 +47,9 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <navbar></navbar>
+   <!-- <navbar></navbar>-->
     <div ui-view=""></div>
-    <footer></footer>
+   <!-- <footer></footer>-->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
@@ -87,7 +91,13 @@
       <script src="app/app.js"></script>
       <!-- injector:js -->
       <script src="components/util/util.module.js"></script>
-      <script src="app/myInput/myInput.directive.js"></script>
+      <script src="app/main/login/login.js"></script>
+      <script src="app/main/categorias/categorias.js"></script>
+      <script src="app/main/categorias/celulares/celulares.controller.js"></script>
+      <script src="app/main/categorias/celulares/celulares.js"></script>
+      <script src="app/main/categorias/computadoras/computadoras.controller.js"></script>
+      <script src="app/main/categorias/computadoras/computadoras.js"></script>
+      <script src="app/main/list/angular/angular.controller.js"></script>
       <script src="app/main/list/angular/angular.js"></script>
       <script src="app/main/list/angular/edit-dialog/edit-dialog.controller.js"></script>
       <script src="app/main/list/angular/edit-dialog/edit-dialog.js"></script>
@@ -95,10 +105,12 @@
       <script src="app/main/list/java/java.js"></script>
       <script src="app/main/list/list.controller.js"></script>
       <script src="app/main/list/list.js"></script>
+      <script src="app/main/login/login.controller.js"></script>
+      <script src="app/main/categorias/categorias.controller.js"></script>
       <script src="app/main/main.controller.js"></script>
       <script src="app/main/main.js"></script>
       <script src="app/my-filter/my-filter.filter.js"></script>
-      <script src="app/main/list/angular/angular.controller.js"></script>
+      <script src="app/myInput/myInput.directive.js"></script>
       <script src="app/services/course/course.service.js"></script>
       <script src="app/test/directives/directives.controller.js"></script>
       <script src="app/test/directives/directives.js"></script>
