@@ -4,8 +4,8 @@ angular.module('uiApp')
   .config(function ($stateProvider) {
     $stateProvider
       .state('login', {
-        url: '/',
+        url: 'login',
         templateUrl: 'app/main/login/login.html',
-        controller: 'LoginCtrl'
+        controller: 'LoginCtrl as vmLogin'
       });
   });

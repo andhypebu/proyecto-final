@@ -32,6 +32,6 @@ angular.module('uiApp')
 
         function select(index) {
             vm.selected = vm.tabs[index];
-            $state.go(vm.selected.state);
+            $state.go(vm.selected.state)
         }
     });
