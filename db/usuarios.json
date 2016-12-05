@@ -8,6 +8,10 @@
 			"id": 2,
 			"usuario": "maria.lopez@gmail.com", 
 			"password": "maria" 
+		},{ 
+			"id": 3,
+			"usuario": "aperez", 
+			"password": "pass" 
 		}
 	] 
 }
