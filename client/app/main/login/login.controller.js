@@ -26,13 +26,13 @@ angular.module('uiApp')
 
     vm.loginUser = function(){
         console.log(vm.users);
-   alert("Username: "+ vm.username+"      "+ "Password:"+ vm.password);
+  // alert("Username: "+ vm.username+"      "+ "Password:"+ vm.password);
     var loggedin = false;
     //var TotalUsers = vm.users.length;
      angular.forEach(vm.users,function(value,key){
          if(value.usuario === vm.username && value.password === vm.password)
          {
-              alert("Username: "+ value.usuario+"      "+ "Password:"+ value.password);
+             // alert("Username: "+ value.usuario+"      "+ "Password:"+ value.password);
              loggedin = true;
              //break;
          }

@@ -13,9 +13,9 @@ angular.module('uiApp', [
   'angular-momentjs',
   'cgBusy'
 ])
-  .config(function($urlRouterProvider, $locationProvider) {
+  .config(function($urlRouterProvider, $locationProvider,$stateProvider) {
     $urlRouterProvider
       .otherwise('/');
-
+     
     $locationProvider.html5Mode(true);
   });
