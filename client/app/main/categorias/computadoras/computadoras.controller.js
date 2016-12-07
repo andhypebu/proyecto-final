@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('uiApp')
-  .controller('ComputadorasCtrl', function (NgTableParams) {
+  .controller('ComputadorasCtrl', function (NgTableParams,$http,$uibModal) {
    var vm =this;
    /* $http.get("db/computers.json").success(function(response){
       console.log("res:", response);
@@ -51,5 +51,18 @@ angular.module('uiApp')
       }
     );
     console.log(vm.computers);
+
+    vm.showModalEdit = function (row) {
+    var modalInstance = $uibModal.open({
+        templateUrl: 'app/main/categorias/computadoras/edit-computer/edit-computer.html',
+        controller: 'vmEditComputer',
+        resolve: {
+            cat: function () {
+                return row;
+            }
+        }
+    });
+};
+
 
   });

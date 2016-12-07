@@ -1,0 +1,41 @@
+<div>This is the edit-computer view.</div>
+<!--MODAL EDIT-->
+<div  class="modal fade"id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+      <div class="modal-dialog">
+    <div class="modal-content">
+          <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+        <h4 class="modal-title custom_align" id="Heading">EDITAR COMPUTADORA</h4>
+      </div>
+     <div class="modal-body">
+        <div class="form-group">
+        <label type="text">Marca: </label>
+        <input class="form-control " type="text" placeholder="Introduzca la marca del equipo" ng-model="computers.marca">
+        </div>
+        <div class="form-group">
+        <label type="text">Modelo: </label>
+        <input class="form-control " type="text" placeholder="Introduzca el modelo del equipo" ng-model="computers.modelo">
+        </div>
+        <div class="form-group">
+        <label type="text">Precio: </label>
+        <input class="form-control" type="number" placeholder="Introduzca el precio del equipo" ng-model="computers.precio">
+        </div>
+        <div class="form-group">
+        <label type="text">Fecha de Ingreso: </label>
+        <div class="input-group date" data-provide="datepicker">
+        <input type="text" class="form-control">
+        <div class="input-group-addon">
+            <span class="glyphicon glyphicon-th"></span>
+        </div>
+        </div>
+        </div>
+      </div>
+      <div class="modal-footer ">
+        <button type="button" class="btn btn-info" ><span class="glyphicon glyphicon-ok-sign"></span>Guardar</button>
+        <button type="button" class="btn btn-danger" ><span class="glyphicon glyphicon-remove"></span>Cancelar</button>
+      </div>
+        </div>
+    <!-- /.modal-content --> 
+  </div>
+      <!-- /.modal-dialog --> 
+    </div>

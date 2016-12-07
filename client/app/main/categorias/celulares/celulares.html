@@ -1,1 +1,17 @@
-<div>This is the celulares view.</div>
+<table ng-table="vmCelulares.tableParams"  class="table table-condensed" show-filter="true"  >
+	<tr ng-repeat="celu in $data track by celu.id">
+		<td title="'Id'" filter="{ id: 'number'}" sortable="'id'">
+			{{celu.id}}</td>
+		<td title="'Marca'" filter="{ marca: 'text'}" sortable="'marca'">
+			{{celu.marca}}</td>
+		<td title="'Modelo'" filter="{ modelo: 'text'}" sortable="'modelo'">
+			{{celu.modelo}}
+    </td>
+    <td title="'Precio($)'" filter="{ precio: 'number'}" sortable="'precio'">
+			{{celu.precio}}
+    </td>
+	<td><button class="btn btn-primary btn-xs" ng-click="vmCelulares.showModalEdit(celu)" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+    <td><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
+		
+	</tr>
+</table>
