@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('uiApp')
-  .controller('ComputadorasCtrl', function (NgTableParams,$http,$uibModal) {
+  .controller('ComputadorasCtrl', function (NgTableParams,dialogs) {
    var vm =this;
    /* $http.get("db/computers.json").success(function(response){
       console.log("res:", response);
@@ -9,7 +9,7 @@ angular.module('uiApp')
       vm.compus = response.computers;
     });*/
 
-    vm.computers = [
+    var computers = [
       
 		{
 			"id": 1, 
@@ -42,27 +42,45 @@ angular.module('uiApp')
 		}
 
     ];
+        activate();
+        function activate()
+        {
+            vm.tableParams = new NgTableParams(
+            {},
+            {
+                //dataset:vm.computers
+                filterDelay: 0,
+                getData: getData
+            });
 
-
-    vm.tableParams = new NgTableParams(
-      {},
-      {
-        dataset:vm.computers
-      }
-    );
-    console.log(vm.computers);
-
-    vm.showModalEdit = function (row) {
-    var modalInstance = $uibModal.open({
-        templateUrl: 'app/main/categorias/computadoras/edit-computer/edit-computer.html',
-        controller: 'vmEditComputer',
-        resolve: {
-            cat: function () {
-                return row;
-            }
+            
         }
-    });
-};
+        function getData(params){
+            var compus = computers;
+            console.log(vm.compus);
+            return compus;
+        }
+
+        function editCompu(row){
+
+            var options = {
+                size:'lg',
+                animation:true
+            };
+
+            var showModalEdit = dialogs.create(
+            'app/main/categorias/computadoras/edit-computer/edit-computer.html',
+            ,'vmEditComputer',
+            row,
+            options,
+            'vmComputerEdit');
+
+            dialog.result.then(function(s){
+                activate();
+            
+            });
+
+        }
 
 
   });
